@@ -30,10 +30,13 @@ class MergeSort:
 
     @classmethod
     def execute(cls, arr: list) -> list:
+        # Этот публичный метод нужно использовать для сортировки,
+        # передавая ему неотсортированный массив.
+
         return cls._recursive_sort(arr)
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
 
     # Проверяем работоспособность класса
     assert MergeSort.execute([1, 20, 3, 0, 0, 0, 0, 1]) == [0, 0, 0, 0, 1, 1, 3, 20]

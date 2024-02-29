@@ -10,12 +10,14 @@ class ListNode:
 
 
 class EpicCircularQueueTwo:
+
+    # Циклический буфер на основе связного списка.
     def __init__(self, size: int):
         self.__check_size(size)
         self._max_size = size
         self._current_size = 0
         self._head_pointer = self._tail_pointer = creation_pointer = ListNode(value=None)
-        for i in range(size - 1):
+        for _ in range(size - 1):
             creation_pointer.next = ListNode(value=None)
             creation_pointer = creation_pointer.next
         creation_pointer.next = self._head_pointer
@@ -59,7 +61,7 @@ class EpicCircularQueueTwo:
         return value
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
 
     # Проверяем работоспособность класса
     circular_queue_2 = EpicCircularQueueTwo(size=10)

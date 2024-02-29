@@ -2,6 +2,8 @@ from typing import Any
 
 
 class EpicCircularQueueOne:
+
+    # Циклический буфер на основе списка
     def __init__(self, size: int):
         self.__check_size(size)
         self._max_size = size
@@ -41,7 +43,7 @@ class EpicCircularQueueOne:
         return value
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
 
     # Проверяем работоспособность класса
     circular_queue_1 = EpicCircularQueueOne(size=10)

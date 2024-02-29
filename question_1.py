@@ -14,13 +14,15 @@ def myIsEven(value: int) -> bool:
     return value & 1 == 0
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
+
     assert isEven(2) is True
     assert isEven(10000) is True
     assert myIsEven(2) is True
     assert myIsEven(1000) is True
     assert myIsEven(11111111) is False
-
+    assert myIsEven(666) is True
+    assert myIsEven(1999) is False
 
 
 
